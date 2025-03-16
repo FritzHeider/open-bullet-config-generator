@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "OpenBullet 2 Config Generator",
+  "version": "1.0",
+  "description": "A Chrome extension to generate OpenBullet 2 configs by recording network activity.",
+  "permissions": [
+    "webRequest",
+    "declarativeNetRequest",
+    "cookies",
+    "storage",
+    "activeTab",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+  "service_worker": "background.js",
+  "type": "module"
+},
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "start_recording": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Command+Shift+R"
+      },
+      "description": "Start recording network requests"
+    },
+    "stop_recording": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Stop recording and generate config"
+    }
+  }
+}

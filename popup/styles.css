@@ -1,0 +1,136 @@
+/* General Layout */
+body {
+  width: 320px;
+  max-width: 90%;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  opacity: 0.9;
+}
+
+/* Button Click Effect */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Disabled Button */
+button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* Status Message Styles */
+.status-message {
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Fade-in effect for status messages */
+.status-message.show {
+  opacity: 1;
+}
+
+/* Status Message Types */
+.status-message.info {
+  background-color: #e7f3ff;
+  color: #0056b3;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-message.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  button {
+    background-color: #2196f3;
+  }
+
+  button:hover {
+    background-color: #1976d2;
+  }
+
+  .status-message.info {
+    background-color: #1e3a5f;
+    color: #cce5ff;
+  }
+
+  .status-message.success {
+    background-color: #1b4d30;
+    color: #d4edda;
+  }
+
+  .status-message.warning {
+    background-color: #775f1c;
+    color: #ffeeba;
+  }
+
+  .status-message.error {
+    background-color: #5c161f;
+    color: #f8d7da;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

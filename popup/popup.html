@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenBullet Config Generator</title>
+  <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Ensures the popup has a proper width */
+    body {
+      min-width: 350px; /* Adjust width as needed */
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h2>OpenBullet Config Generator</h2>
+  
+  <!-- Status Message -->
+  <div id="statusMessage" class="status-message" aria-live="polite"></div>
+  
+  <!-- Button Group -->
+  <div class="button-group">
+    <button id="start">Start Recording</button>
+    <button id="stop">Stop Recording</button>
+    <button id="generate">Generate Config</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# OpenBullet Config
+REQUEST POST "{{url}}" AutoRedirect=FALSE
+  CONTENT "{{body}}"
+  CONTENTTYPE "application/x-www-form-urlencoded"
+  COOKIES
+    {{#each cookies}}
+    {{name}}: {{value}}
+    {{/each}}
+  HEADERS
+    {{#each headers}}
+    {{name}}: {{value}}
+    {{/each}}
